@@ -1,11 +1,8 @@
 {
-  "sections": {
-    "main": {
-      "type": "main-404",
-      "settings": {}
-    }
-  },
-  "order": [
-    "main"
-  ]
+    "sections": {
+        "template": {
+            "type": "template-404"
+        }
+    },
+    "order": ["template"]
 }
