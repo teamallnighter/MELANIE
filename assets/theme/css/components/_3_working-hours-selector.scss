@@ -1,0 +1,39 @@
+/* -------------------------------- 
+
+File#: _3_working-hours-selector
+Title: Working Hours Selector
+Descr: A widget to select the daily opening and closing hours of a store
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+.whs {}
+
+.whs__item {
+  background-color: var(--color-bg-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--inner-glow), var(--shadow-xs), var(--shadow-xs);
+
+  transition: box-shadow 0.2s;
+
+  &:not(.whs__item--checked) {
+    .whs__slot {
+      opacity: 0;
+      visibility: hidden;
+
+      &.whs__slot--added {
+        display: none;
+      }
+    }
+  }
+}
+
+.whs__item--checked { /* checked status */
+  box-shadow: var(--shadow-xs), var(--shadow-xs), 0 0 0 2px var(--color-primary);
+}
+
+.whs__slot:not(.whs__slot--added) .whs__remove-btn-wrapper,
+.whs__slot--added .whs__add-btn-wrapper { 
+  /* buttons visibility */
+  display: none;
+}
